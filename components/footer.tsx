@@ -1,30 +1,40 @@
-import Container from "./container";
-import { EXAMPLE_PATH } from "../lib/constants";
+import React from "react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
-          </div>
+    <footer className="text-blue-600 py-4 text-center">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+        <div className="text-center lg:text-left">
+          <ul className="flex space-x-4 text-sm lg:text-base">
+            <li>
+            <a className="transition-transform transform hover:scale-105"  href="https://www.linkedin.com/in/brucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on LinkedIn">
+            <Image src="/favicon/linkedin.svg" alt="LinkedIn"  width={20} height={20} />
+          </a>
+            </li>
+            <li>
+            <a className="transition-transform transform hover:scale-105"  href="https://www.youtube.com/@BruceSailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on YouTube">
+            <Image src="/favicon/youtube.svg" alt="YouTube"  width={20} height={20} />
+          </a>
+            </li>
+            <li>
+              <a className="transition-transform transform hover:scale-105" href="https://www.instagram.com/thebrucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on Instagram">
+              <Image src="/favicon/instagram.svg" alt="Instagram"  width={20} height={20} />
+              </a>
+            </li>
+            <li>
+            <a className="transition-transform transform hover:scale-105"  href="https://github.com/brucesailes" target="_blank" rel="noopener noreferrer"  title="Bruce Sailes on GitHub">
+          <Image src="/favicon/github.svg" alt="GitHub"  width={20} height={20} />
+          </a>
+            </li>
+          </ul>
         </div>
-      </Container>
+        <div className="text-center lg:text-right">
+          <p>
+            &copy; All Rights Reserved.
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }
