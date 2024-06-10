@@ -6,7 +6,7 @@ import HeroPost from "../components/hero-post";
 import MoreStories from "../components/more-stories";
 import { GetStaticProps } from "next";
 import { getAllPostsForHome } from "../lib/api";
-import { useRouter } from 'next/router';
+
 
 interface Post {
   title: string;
